@@ -1,10 +1,18 @@
 import json
+from plumbum import cli
 from prompt_toolkit import prompt
 from pyfiglet import Figlet
 
 
-class PromptRPG:
-    def __init__(self):
+class PromptRPG(cli.Application):
+    VERSION = "0.1.0"
+    world_file = 'world.json'
+
+    @cli.switch(['-w', '--world'], str, help="Provide a custom world file.")
+    def set_world_fild(self, file_name):
+        self.world_file = file_name
+
+    def main(self):
         self.should_exit = False
         self.start()
         self.game()
@@ -18,7 +26,7 @@ class PromptRPG:
         self.hp = 15
         self.atk = 5
         self.coin = 0
-        self.load_world('world.json')
+        self.load_world(self.world_file)
 
     def end(self):
         pass
