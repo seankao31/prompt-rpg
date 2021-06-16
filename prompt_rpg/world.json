@@ -1,0 +1,40 @@
+{
+    "name": "city_a",
+    "type": "area",
+    "children": [
+        {
+            "name": "store",
+            "type": "area",
+            "children": [
+                {
+                    "name": "potion_a",
+                    "type": "potion"
+                },
+                {
+                    "name": "weapon_a",
+                    "type": "weapon"
+                }
+            ]
+        },
+        {
+            "name": "field",
+            "type": "area",
+            "children": [
+                {
+                    "name": "monster",
+                    "type": "enemy"
+                },
+                {
+                    "name": "demon_castle",
+                    "type": "area",
+                    "children": [
+                        {
+                            "name": "demon_lord",
+                            "type": "enemy"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
