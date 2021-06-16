@@ -7,12 +7,11 @@
             "type": "area",
             "children": [
                 {
-                    "name": "potion_a",
-                    "type": "potion"
-                },
-                {
                     "name": "weapon_a",
-                    "type": "weapon"
+                    "type": "weapon",
+                    "content": "When equiped, ATK + 20. Price: 20.",
+                    "atk": 20,
+                    "price": 20
                 }
             ]
         },
@@ -22,7 +21,11 @@
             "children": [
                 {
                     "name": "monster",
-                    "type": "enemy"
+                    "type": "enemy",
+                    "content": "Bad monster",
+                    "hp": 3,
+                    "atk": 2,
+                    "drop": 30
                 },
                 {
                     "name": "demon_castle",
@@ -30,7 +33,11 @@
                     "children": [
                         {
                             "name": "demon_lord",
-                            "type": "enemy"
+                            "type": "enemy",
+                            "content": "THE BOSS",
+                            "hp": 20,
+                            "atk": 10,
+                            "drop": 999999999
                         }
                     ]
                 }
