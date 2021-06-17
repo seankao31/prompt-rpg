@@ -38,7 +38,7 @@ class PromptRPG(cli.Application):
         with open(file_name, 'r') as file:
             self.world = json.load(file)
             self.position = self.world
-            self.path_list.append(self.position['name'])
+            self.path_list = [self.position['name']]
 
     def game(self):
         while not self.should_exit:
