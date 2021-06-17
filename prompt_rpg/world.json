@@ -1,0 +1,47 @@
+{
+    "name": "city_a",
+    "type": "area",
+    "children": [
+        {
+            "name": "store",
+            "type": "area",
+            "children": [
+                {
+                    "name": "weapon_a",
+                    "type": "weapon",
+                    "content": "When equiped, ATK + 20. Price: 20.",
+                    "atk": 20,
+                    "price": 20
+                }
+            ]
+        },
+        {
+            "name": "field",
+            "type": "area",
+            "children": [
+                {
+                    "name": "monster",
+                    "type": "enemy",
+                    "content": "Bad monster",
+                    "hp": 3,
+                    "atk": 2,
+                    "drop": 30
+                },
+                {
+                    "name": "demon_castle",
+                    "type": "area",
+                    "children": [
+                        {
+                            "name": "demon_lord",
+                            "type": "enemy",
+                            "content": "THE BOSS",
+                            "hp": 20,
+                            "atk": 10,
+                            "drop": 999999999
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
