@@ -1,25 +1,15 @@
 import json
-from plumbum import cli
 from prompt_toolkit import prompt
-from pyfiglet import Figlet
 
 
-class PromptRPG(cli.Application):
-    VERSION = "0.1.0"
-    world_file = 'world.json'
+class Game:
+    def __init__(self):
+        self.should_exit = False
 
-    @cli.switch(['-w', '--world'], str, help="Provide a custom world file.")
-    def set_world_fild(self, file_name):
+    def set_world_file(self, file_name):
         self.world_file = file_name
 
-    def main(self):
-        self.should_exit = False
-        self.start()
-        self.game()
-        self.end()
-
     def start(self):
-        self.print_banner()
         self.path_list = []
         self.world = {}
         self.position = {}
@@ -31,16 +21,13 @@ class PromptRPG(cli.Application):
     def end(self):
         pass
 
-    def print_banner(self):
-        print(Figlet(font='larry3d').renderText('PromptRPG'))
-
     def load_world(self, file_name):
         with open(file_name, 'r') as file:
             self.world = json.load(file)
             self.position = self.world
             self.path_list = [self.position['name']]
 
-    def game(self):
+    def game_loop(self):
         while not self.should_exit:
             command = prompt('\n' + '/'.join(self.path_list) + '>')
             self.execute(command)
@@ -221,7 +208,3 @@ class PromptRPG(cli.Application):
             if child['name'] == file_name:
                 return child
         return None
-
-
-if __name__ == '__main__':
-    PromptRPG()
