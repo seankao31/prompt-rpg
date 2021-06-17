@@ -1,4 +1,4 @@
-from prompt_rpg.prompt_rpg import PromptRPG
+from prompt_rpg.app import PromptRPG
 
 
 if __name__ == '__main__':

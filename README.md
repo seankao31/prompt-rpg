@@ -10,8 +10,8 @@ https://user-images.githubusercontent.com/11817102/122359160-e554b300-cf87-11eb-
 
 # Play
 ``` bash
-# inside prompt_rpg/
-$ python game.py
+$ pip install -r requirements.txt
+$ python prompt_rpg.py
 ```
 
 # Commands
