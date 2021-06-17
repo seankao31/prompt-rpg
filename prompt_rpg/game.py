@@ -91,7 +91,18 @@ class PromptRPG(cli.Application):
         self.should_exit = True
 
     def execute_help(self, command):
-        print('This is help message.')
+        print("""
+- exit: exit game
+- help: help message
+- ls: list files in current directory
+- file <file_name>: see file type of <file_name>
+- cat <file_name>: print content of <file_name>
+- cd <directory_name>: change working directory to <directory_name>
+- cd ..: change working directory to parent directory
+- buy <file_name>: buy the item <file_name> and equip it
+- fight <file_name>: fight an enemy <file_name>. Player hits enemy once and vice versa.
+- status: print player status
+""")
 
     def execute_ls(self, command):
         if len(command) > 1:
