@@ -3,9 +3,7 @@ A command line prompt rpg game.
 Defeat monsters, buy weapons, defeat demon lord, save the world something something.
 
 
-
-https://user-images.githubusercontent.com/11817102/122359160-e554b300-cf87-11eb-86d8-7fe7d37c8411.mov
-
+https://user-images.githubusercontent.com/11817102/122371168-3e294900-cf92-11eb-9aa0-41bab33ccaf8.mov
 
 
 # Play
